@@ -24,10 +24,14 @@ public class Main {
                 resultado = number1 * number2;
                 break;
             case 4:
-                resultado = number1 / number2;
+                if (number2 == 0)
+                    System.out.println("não é possivel fazer a divisão por 0");
+                else
+                    resultado = number1 / number2;
                 break;
             default:
-                System.out.println("opção inválida");
+                System.out.println("opção de operação inválida");
+                return;
         }
         System.out.println("o resultado da operação é: "+ resultado);
     }
