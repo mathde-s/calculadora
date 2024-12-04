@@ -4,12 +4,12 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
+        double resultado = 0;
 
         System.out.println("digite dois números");
-
-        double resultado = 0;
         double number1 = scanner.nextDouble();
         double number2 = scanner.nextDouble();
+
         System.out.println("agora escolha uma operação para ser feita");
         System.out.println("1: adição | 2: subtração | 3: multiplicação | 4: divisão");
         int operador = scanner.nextInt();
