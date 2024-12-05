@@ -15,19 +15,19 @@ public class Main {
         int operador = scanner.nextInt();
         switch (operador){
             case 1:
-                resultado = number1 + number2;
+                resultado = somar(number1,number2);
                 break;
             case 2:
-                resultado = number1 - number2;
+                resultado = subtrair(number1, number2);
                 break;
             case 3:
-                resultado = number1 * number2;
+                resultado = multiplicar(number1, number2);
                 break;
             case 4:
                 if (number2 == 0)
                     System.out.println("não é possivel fazer a divisão por 0");
                 else
-                    resultado = number1 / number2;
+                    resultado = dividir(number1, number2);
                 break;
             default:
                 System.out.println("opção de operação inválida");
@@ -35,4 +35,18 @@ public class Main {
         }
         System.out.println("o resultado da operação é: "+ resultado);
     }
+    public static double somar(double a, double b){
+        return a + b;
+    }
+    public static double subtrair(double a, double b){
+        return a - b;
+    }
+    public static double multiplicar(double a, double b){
+        return a * b;
+    }
+    public static double dividir(double a, double b){
+        return a / b;
+    }
 }
+// TODO: separar a calculadora em classes diferentes e deixar a main mais limpa.
+//  tirar o excesso de informação e distribuir para outras classes
