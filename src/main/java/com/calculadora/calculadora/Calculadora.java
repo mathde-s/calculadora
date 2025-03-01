@@ -1,6 +1,8 @@
+package com.calculadora.calculadora;
+
 import java.util.Scanner;
 
-public class Main {
+public class Calculadora {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
@@ -45,8 +47,9 @@ public class Main {
         return a * b;
     }
     public static double dividir(double a, double b){
+        if (b == 0) {
+            throw new ArithmeticException("não é possivel dividir por 0");
+        }
         return a / b;
     }
 }
-// TODO: separar a calculadora em classes diferentes e deixar a main mais limpa.
-//  tirar o excesso de informação e distribuir para outras classes
